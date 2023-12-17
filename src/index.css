@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +13,81 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p{
+  font-size: 1.6rem;
+}
+h1{
+  font-size: 6rem;
+}
+.App{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,255,0.1);
+  color:rgb(235, 243, 243)
+}
+.App::before{
+  content: '';
+  background: url('./components/sea-164989_640.jpg') no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+.container{
+  max-width: 700px;
+  height:80vh;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search{
+  text-align: center;
+  padding: 1rem;
+}
+input{
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  color:black;
+  background-color: rgba(225,228,196,0.5);
+  border: 1px rgba(255,255,255,0.9)
+}
+::placeholder{
+  color:aliceblue
+}
+
+ .top{
+  
+  left: 90%;
+  margin: 1rem auto;
+}
+
+.condition{
+  position:relative;
+  left: 00%;
+  transform-origin: 0 0;
+  transform: rotate(250degree);
+  color:white;
+  font-size: 2.3rem;
+}
+.bottom{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.3);
+}
+.bold{
+  font-weight: 700;
 }
